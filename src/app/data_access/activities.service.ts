@@ -1,20 +1,19 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Activity  } from '../model/activity.model';
+import { Activity } from '../models/activity.model';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ActivitiesService {
+  private APIurl = 'http://localhost:8080';
 
-  private APIurl = "http://localhost:8080"
+  constructor(private httpClient: HttpClient) {}
 
-  constructor(private httpClient: HttpClient) { }
-
-  activities:  Activity[]= [];
+  activities: Activity[] = [];
 
   getActivities(): Observable<Activity[]> {
-    return this.httpClient.get<Activity[]>(this.APIurl + "/activity");
+    return this.httpClient.get<Activity[]>(this.APIurl + '/activity');
   }
 }

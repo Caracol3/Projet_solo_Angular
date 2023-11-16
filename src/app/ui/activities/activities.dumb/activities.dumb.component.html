@@ -1,5 +1,19 @@
-<h3>{{ activity.title }}</h3>
-<img [src]="activity.image" alt="" />
-<p>{{ activity.description }}</p>
-<p>{{ activity.tutorial }}</p>
 
+
+<p-card class="p-card" header="{{ activity.title }}"  [style]="{ width: 'auto' }">
+  <ng-template pTemplate="header">
+    <img [src]="activity.image" alt="activité" />
+  </ng-template>
+  <p>
+    {{ activity.description }}
+  </p>
+  <ng-template pTemplate="footer">
+      <p-button label="Découvrir plus" icon="pi pi-check"></p-button>
+  </ng-template>
+</p-card>
+
+
+
+<!-- <p>{{ activity.tutorial }}</p> -->
+
+ 

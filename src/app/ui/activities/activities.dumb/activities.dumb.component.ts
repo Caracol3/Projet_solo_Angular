@@ -1,5 +1,5 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { Activity } from 'src/app/model/activity.model';
+import { Component, Input } from '@angular/core';
+import { Activity } from 'src/app/models/activity.model';
 
 @Component({
   selector: 'dumbActivities',
@@ -9,7 +9,4 @@ import { Activity } from 'src/app/model/activity.model';
 export class ActivitiesDumbComponent {
   @Input()
   activity!: Activity;
-
-  
-
 }
