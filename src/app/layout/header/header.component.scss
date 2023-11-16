@@ -1,8 +1,24 @@
 .layout-header{
-  background-color: rgb(153, 253, 253);
-  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+  background-color: #fff;
 }
 
+.left-section{
+margin-left: 1em;
+}
+
+.right-section{
+  margin-right: 1em;
+  }
+
 .logo-img{
+  padding: 0.5em;
 width: 120px;
+}
+
+.layout-header button {
+  width: 40px;
+  height: 40px;
 }
