@@ -16,4 +16,9 @@ export class ActivitiesService {
   getActivities(): Observable<Activity[]> {
     return this.httpClient.get<Activity[]>(this.APIurl + '/activity');
   }
+
+  getActivitiesByCategory(categoryId: number): Observable<Activity[]> {
+    return this.httpClient.get<Activity[]>(this.APIurl + '/activity/category/' + categoryId);
+  }
+
 }

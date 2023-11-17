@@ -5,10 +5,12 @@ import { ActivitiesSmartComponent } from './ui/activities/activities.smart/activ
 import { FamiliesSmartComponent } from './ui/families/families.smart/families.smart/families.smart.component';
 import { ChildrenSmartComponent } from './ui/children/children.smart/children.smart/children.smart.component';
 import { EvaluationsSmartComponent } from './ui/evaluations/evaluations.smart/evaluations.smart/evaluations.smart.component';
+import { SingleActivitySmartComponent } from './ui/activities/singleActivity.smart/single-activity.smart/single-activity.smart.component';
 
 
 const routes: Routes = [
   { path: 'activities', component: ActivitiesSmartComponent },
+  { path: 'activities/:categoryId', component: SingleActivitySmartComponent},
   { path: 'families', component: FamiliesSmartComponent },
   { path: 'children', component: ChildrenSmartComponent },
   { path: 'evaluations', component: EvaluationsSmartComponent },
