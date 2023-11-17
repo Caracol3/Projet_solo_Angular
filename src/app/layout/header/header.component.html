@@ -1,0 +1,30 @@
+<div class="layout-header">
+  <div class="left-section">
+    <p-menu #activitiesMenu [model]="activities" [popup]="true"></p-menu>
+    <button
+      pButton
+      type="button"
+      (click)="activitiesMenu.toggle($event)"
+      icon="pi pi-bars"
+      size="normal"
+    ></button>
+  </div>
+
+  <img
+    src="assets/logos/La fabrique à idées v3.png"
+    alt="logo"
+    class="logo-img"
+    routerLink="/home"
+  />
+
+  <div class="right-section">
+    <p-menu #settingsMenu [model]="settings" [popup]="true"></p-menu>
+    <button
+      pButton
+      type="button"
+      (click)="settingsMenu.toggle($event)"
+      icon="pi pi-ellipsis-v"
+      size="normal"
+    ></button>
+  </div>
+</div>
