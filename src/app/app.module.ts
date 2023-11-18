@@ -15,6 +15,7 @@ import { ToastModule} from 'primeng/toast';
 import { FormsModule } from '@angular/forms';
 import { MessageService } from 'primeng/api';
 import { HomeComponent } from './layout/home/home.component';
+import { AccordionModule } from 'primeng/accordion';
 import { FamiliesSmartComponent } from './ui/families/families.smart/families.smart/families.smart.component';
 import { FamiliesDumbComponent } from './ui/families/families.dumb/families.dumb/families.dumb.component';
 import { ChildrenDumbComponent } from './ui/children/children.dumb/children.dumb/children.dumb.component';
@@ -51,7 +52,8 @@ import { SingleActivityDumbComponent } from './ui/activities/singleActivity.dumb
     MenuModule,
     ToastModule,
     FormsModule,
-  
+    AccordionModule
+
   ],
   providers: [
     MessageService

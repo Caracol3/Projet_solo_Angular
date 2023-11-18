@@ -1,0 +1,23 @@
+.p-accordion{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+}
+
+.p-accordionTab {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centre horizontalement */
+  justify-content: center; /* Centre verticalement */
+}
+
+.activity-img {
+  width: 80%;
+  height: 60%;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px #ccc;
+  margin-left: 37px;
+}
