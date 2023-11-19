@@ -1,6 +1,9 @@
 <p-accordion [activeIndex]="0">
   <p-accordionTab  class="container" header="{{activity.title}}"  >
-      <img  class="activity-img" [src]="activity.image" alt="image d'activité" (click)="onSelectedActivity(activity.id)">
+    <a (click)="onSelectedActivity(activity.id)">
+      <img class="activity-img" [src]="activity.image" alt="image d'activité">
+    </a>
+
       <p>{{activity.description}}</p>
   </p-accordionTab>
 </p-accordion>

@@ -14,7 +14,7 @@ export class SingleActivityDumbComponent {
   constructor(private router: Router) {}
 
   onSelectedActivity(activityId: number) {
-    this.router.navigate(['/activities', activityId]);
+    this.router.navigate(['/activities/activity', activityId]);
     console.log(activityId);
   }
 }

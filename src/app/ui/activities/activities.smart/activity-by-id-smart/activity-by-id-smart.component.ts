@@ -32,4 +32,10 @@ export class ActivityByIdSmartComponent implements OnInit {
       }
     });
   }
+
+  goToTutorial() {
+    if (this.activity) {
+      window.open(this.activity.tutorial, '_blank');
+    }
+  }
 }

@@ -13,7 +13,7 @@ import { ActivityByIdSmartComponent } from './ui/activities/activities.smart/act
 const routes: Routes = [
   { path: 'activities', component: ActivitiesSmartComponent },
   { path: 'activities/:categoryId', component: SingleActivitySmartComponent},
-  { path: 'activities/:activityId', component: ActivityByIdSmartComponent},
+  { path: 'activities/activity/:activityId', component: ActivityByIdSmartComponent},
   { path: 'families', component: FamiliesSmartComponent },
   { path: 'children', component: ChildrenSmartComponent },
   { path: 'evaluations', component: EvaluationsSmartComponent },

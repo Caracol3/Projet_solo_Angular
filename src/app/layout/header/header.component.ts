@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Router } from '@angular/router';
 import { MenuItem } from 'primeng/api';
 
 @Component({
@@ -8,11 +8,15 @@ import { MenuItem } from 'primeng/api';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent {
+
+
+
   activities: MenuItem[] = [
     {
       label: 'Activités manuelles',
       icon: 'pi pi-angle-right',
-      command: () => {},
+      routerLink: '/activities/category/1'
+      
     },
     {
       label: 'Coloriage',
@@ -59,5 +63,5 @@ export class HeaderComponent {
     },
   ];
 
-  constructor() {}
+  constructor(private router: Router) {}
 }

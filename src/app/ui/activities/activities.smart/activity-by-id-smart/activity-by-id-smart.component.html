@@ -1,6 +1,18 @@
 <ng-container
 *ngIf="activity"
 >
-<h3>{{activity.title}}</h3>
+<p-card class="card" header={{activity.title}}
+[style]="{ width: '360px', 'height': 'auto','margin-left': '15px','margin-top': '15px','align-self':'center' }">
+  <ng-template pTemplate="header">
+      <img class="image" alt="Card" [src]="activity.image" />
+  </ng-template>
+  <p>
+     {{activity.description}}
+  </p>
+  <ng-template pTemplate="footer">
+      <p-button label="En savoir plus" icon="pi pi-angle-right" styleClass="p-button-warning" (click)="goToTutorial()"></p-button>
+  </ng-template>
+</p-card>
 </ng-container>
 
+<!-- [style]="{ width: '400px', 'margin-right': '20px' }" -->
