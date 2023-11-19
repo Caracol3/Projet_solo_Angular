@@ -9,7 +9,6 @@ import { Activity } from 'src/app/models/activity.model';
 })
 export class ActivitiesSmartComponent implements OnInit {
   activities: Activity[] = [];
-  demonstrationOfLove: string = '';
 
   constructor(private activitiesService: ActivitiesService) {}
 

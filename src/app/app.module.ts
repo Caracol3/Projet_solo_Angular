@@ -15,6 +15,7 @@ import { ToastModule} from 'primeng/toast';
 import { FormsModule } from '@angular/forms';
 import { MessageService } from 'primeng/api';
 import { HomeComponent } from './layout/home/home.component';
+import { AccordionModule } from 'primeng/accordion';
 import { FamiliesSmartComponent } from './ui/families/families.smart/families.smart/families.smart.component';
 import { FamiliesDumbComponent } from './ui/families/families.dumb/families.dumb/families.dumb.component';
 import { ChildrenDumbComponent } from './ui/children/children.dumb/children.dumb/children.dumb.component';
@@ -23,6 +24,7 @@ import { EvaluationsSmartComponent } from './ui/evaluations/evaluations.smart/ev
 import { EvaluationsDumbComponent } from './ui/evaluations/evaluations.dumb/evaluations.dumb/evaluations.dumb.component';
 import { SingleActivitySmartComponent } from './ui/activities/singleActivity.smart/single-activity.smart/single-activity.smart.component';
 import { SingleActivityDumbComponent } from './ui/activities/singleActivity.dumb/single-activity.dumb/single-activity.dumb.component';
+import { ActivityByIdSmartComponent } from './ui/activities/activities.smart/activity-by-id-smart/activity-by-id-smart.component';
 
 
 @NgModule({
@@ -40,6 +42,7 @@ import { SingleActivityDumbComponent } from './ui/activities/singleActivity.dumb
     EvaluationsDumbComponent,
     SingleActivitySmartComponent,
     SingleActivityDumbComponent,
+    ActivityByIdSmartComponent,
   ],
   imports: [
     BrowserModule,
@@ -51,7 +54,8 @@ import { SingleActivityDumbComponent } from './ui/activities/singleActivity.dumb
     MenuModule,
     ToastModule,
     FormsModule,
-  
+    AccordionModule
+
   ],
   providers: [
     MessageService
