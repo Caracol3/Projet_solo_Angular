@@ -24,6 +24,7 @@ import { EvaluationsSmartComponent } from './ui/evaluations/evaluations.smart/ev
 import { EvaluationsDumbComponent } from './ui/evaluations/evaluations.dumb/evaluations.dumb/evaluations.dumb.component';
 import { SingleActivitySmartComponent } from './ui/activities/singleActivity.smart/single-activity.smart/single-activity.smart.component';
 import { SingleActivityDumbComponent } from './ui/activities/singleActivity.dumb/single-activity.dumb/single-activity.dumb.component';
+import { ActivityByIdSmartComponent } from './ui/activities/activities.smart/activity-by-id-smart/activity-by-id-smart.component';
 
 
 @NgModule({
@@ -41,6 +42,7 @@ import { SingleActivityDumbComponent } from './ui/activities/singleActivity.dumb
     EvaluationsDumbComponent,
     SingleActivitySmartComponent,
     SingleActivityDumbComponent,
+    ActivityByIdSmartComponent,
   ],
   imports: [
     BrowserModule,
