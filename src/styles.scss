@@ -10,3 +10,30 @@ body {
   margin: 0;
   padding: 0;
 }
+
+
+//Modale de création d'un enfant
+.p-dialog{
+  height:350px
+}
+
+.p-dialog .p-dialog-content:last-of-type{
+padding-top: 10px;
+}
+
+.p-calendar-w-btn .p-inputtext {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.p-radiobutton
+{
+  margin-bottom: 10px;
+}
+
+.p-calendar-w-btn .p-datepicker-trigger {
+  height: 45px;
+  margin-top: 10px;
+}
+
+

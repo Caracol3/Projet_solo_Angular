@@ -20,6 +20,8 @@ import { GalleriaModule } from 'primeng/galleria';
 import { DialogModule } from 'primeng/dialog';
 import { CalendarModule } from 'primeng/calendar';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { InputTextModule } from 'primeng/inputtext';
+import { SidebarModule } from 'primeng/sidebar';
 
 import { FamiliesSmartComponent } from './ui/families/families.smart/families.smart/families.smart.component';
 import { FamiliesDumbComponent } from './ui/families/families.dumb/families.dumb/families.dumb.component';
@@ -76,6 +78,8 @@ import { RadioButtonModule } from 'primeng/radiobutton';
     DialogModule,
     CalendarModule,
     RadioButtonModule,
+    InputTextModule,
+    SidebarModule
   ],
   providers: [MessageService],
   bootstrap: [AppComponent],

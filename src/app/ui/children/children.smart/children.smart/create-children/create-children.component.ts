@@ -17,7 +17,7 @@ export class CreateChildrenComponent {
   @Output()
   closeDialog: EventEmitter<void> = new EventEmitter<void>();
 
-  child: ChildCreated = new ChildCreated('titouan', new Date(), 'male');
+  child: ChildCreated = new ChildCreated('', new Date(), 'male');
 
   private familyService = inject(FamiliesService);
 

@@ -15,42 +15,36 @@ export class HeaderComponent {
     {
       label: 'Activités manuelles',
       icon: 'pi pi-angle-right',
-      routerLink: '/activities/category/1'
-      
+      routerLink: '/activities/1'
+
     },
     {
       label: 'Coloriage',
       icon: 'pi pi-angle-right',
-      command: () => {},
-    },
+      routerLink: '/activities/3'    },
     {
       label: 'Activités plein air',
       icon: 'pi pi-angle-right',
-      command: () => {},
-    },
+      routerLink: '/activities/2'    },
     {
       label: 'Motricité',
       icon: 'pi pi-angle-right',
-      command: () => {},
-    },
+      routerLink: '/activities/4'    },
     {
       label: 'Contes',
       icon: 'pi pi-angle-right',
-      command: () => {},
-    },
+      routerLink: '/activities/5'    },
     {
       label: 'Jeux de société',
       icon: 'pi pi-angle-right',
-      command: () => {},
-    },
+      routerLink: '/activities/6'    },
   ];
 
   settings: MenuItem[] = [
     {
       label: 'Mon compte',
       icon: 'pi pi-fw pi-users',
-      command: () => {},
-    },
+      routerLink: '/family/1'    },
     {
       label: 'Paramètres',
       icon: 'pi pi-fw pi-cog',
