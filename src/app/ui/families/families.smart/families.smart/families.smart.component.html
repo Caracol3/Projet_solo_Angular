@@ -15,6 +15,7 @@
   <app-create-children
   [familyId]="familyId"
   (dataEmitChildCreated)="onReceiveChildrenFromChild($event)"
+  (closeDialog)="closeChildrenDialog()"
   >
 
   </app-create-children>
