@@ -1,0 +1,18 @@
+<form #childForm="ngForm" (ngSubmit)="createChildren(childForm.value)">
+  <div>
+    <span class="p-float-label">
+      <input type="text" id="name" pInputText ngModel name="name" required />
+      <label for="name">Nom</label>
+    </span>
+  </div>
+  <div>
+    <p-calendar id="birthday" [(ngModel)]="child.birthday" name="birthday" [showIcon]="true"></p-calendar>
+  </div>
+  <div class="p-field-radiobutton">
+    <p-radioButton name="gender" value="Male" label="Masculin" [(ngModel)]="child.gender"></p-radioButton>
+  </div>
+  <div class="p-field-radiobutton">
+    <p-radioButton name="gender" value="Female" label="Féminin" [(ngModel)]="child.gender"></p-radioButton>
+  </div>
+  <p-button type="submit" label="Ajouter"></p-button>
+</form>
