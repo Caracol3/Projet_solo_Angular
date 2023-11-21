@@ -1,28 +1,32 @@
-import { Component, inject } from '@angular/core';
+import { Component, EventEmitter, Input, Output, inject } from '@angular/core';
 import { FamiliesService } from 'src/app/data_access/families/families.service';
-import { Child } from 'src/app/models/children.model';
+import { Child, ChildCreated } from 'src/app/models/children.model';
 
 @Component({
   selector: 'app-create-children',
   templateUrl: './create-children.component.html',
-  styleUrls: ['./create-children.component.scss']
+  styleUrls: ['./create-children.component.scss'],
 })
 export class CreateChildrenComponent {
+  @Input()
+  familyId!: number;
 
-  child: Child = new Child(0,'titouan', new Date(),'male');
 
-private familyService = inject(FamiliesService);
+  @Output()
+  dataEmitChildCreated: EventEmitter<ChildCreated> = new EventEmitter<ChildCreated>();
 
-  createChildren(child: Child){
-    this.familyService.createChildren(child).subscribe({
+  child: ChildCreated = new ChildCreated('titouan', new Date(), 'male');
+
+  private familyService = inject(FamiliesService);
+
+  createChildren() {
+    this.familyService.createChildren(this.familyId, this.child).subscribe({
       next: (response) => {
         console.log('Enfant créé avec succès', response);
-
       },
       error: (error) => {
-        console.error('Erreur lors de la création de l\'enfant', error);
-
-      }
+        console.error("Erreur lors de la création de l'enfant", error);
+      },
     });
     // this.displayDialog = false;
   }

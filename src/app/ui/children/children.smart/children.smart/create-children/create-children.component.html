@@ -1,7 +1,7 @@
-<form #childForm="ngForm" (ngSubmit)="createChildren(childForm.value)">
+<form #childForm="ngForm" (ngSubmit)="createChildren()">
   <div>
     <span class="p-float-label">
-      <input type="text" id="name" pInputText ngModel name="name" required />
+      <input type="text" id="name" pInputText [(ngModel)]="child.username" name="name" required />
       <label for="name">Nom</label>
     </span>
   </div>
