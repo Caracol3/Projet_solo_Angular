@@ -1,0 +1,33 @@
+<p-galleria
+  [value]="activityImages"
+  [numVisible]="2"
+  [responsiveOptions]="responsiveOptions"
+  ng-reflect-content-height="500px"
+  [containerStyle]="{ 'max-width': '560px' }"
+  [(activeIndex)]="activeIndex"
+>
+  <ng-template pTemplate="item" let-item>
+    <img
+      class="itemImage"
+      [src]="item.itemImageSrc"
+      style="width: 100%; height: 450px"
+    />
+  </ng-template>
+  <ng-template
+    pTemplate="thumbnail"
+    let-item
+    ng-reflect-circular="false"
+    ng-reflect-is-vertical="false"
+    class="thumbnail"
+
+  >
+    <div class="grid grid-nogutter justify-content-center">
+      <img
+        class="thumbnailImage"
+        [src]="item.thumbnailImageSrc"
+      />
+    </div>
+  </ng-template>
+</p-galleria>
+
+
