@@ -9,13 +9,18 @@ import { SingleActivitySmartComponent } from './ui/activities/singleActivity.sma
 import { ActivityByIdSmartComponent } from './ui/activities/activities.smart/activity-by-id-smart/activity-by-id-smart.component';
 import { ColoringSmartComponent } from './ui/activities/activities.smart/coloring/coloring.smart/coloring.smart.component';
 
-
-
 const routes: Routes = [
   { path: 'activities', component: ActivitiesSmartComponent },
-  { path: 'activities/:categoryId', component: SingleActivitySmartComponent},
-  { path: 'activities/activity/:activityId', component: ActivityByIdSmartComponent},
-  { path: 'activities/coloring/:categoryId', component: ColoringSmartComponent},
+  { path: 'activities/:categoryId', component: SingleActivitySmartComponent },
+  {
+    path: 'activities/activity/:activityId',
+    component: ActivityByIdSmartComponent,
+  },
+  {
+    path: 'activities/coloring/:categoryId',
+    component: ColoringSmartComponent,
+  },
+  { path: 'family/:familyId', component: FamiliesSmartComponent},
   { path: 'families', component: FamiliesSmartComponent },
   { path: 'children', component: ChildrenSmartComponent },
   { path: 'evaluations', component: EvaluationsSmartComponent },
@@ -25,6 +30,6 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
