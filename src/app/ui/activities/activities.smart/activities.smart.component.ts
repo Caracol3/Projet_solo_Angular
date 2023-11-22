@@ -18,4 +18,7 @@ export class ActivitiesSmartComponent implements OnInit {
       console.log(this.activities);
     });
   }
+
+  
 }
+

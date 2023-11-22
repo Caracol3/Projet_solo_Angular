@@ -8,6 +8,8 @@ import { EvaluationsSmartComponent } from './ui/evaluations/evaluations.smart/ev
 import { SingleActivitySmartComponent } from './ui/activities/singleActivity.smart/single-activity.smart/single-activity.smart.component';
 import { ActivityByIdSmartComponent } from './ui/activities/activities.smart/activity-by-id-smart/activity-by-id-smart.component';
 import { ColoringSmartComponent } from './ui/activities/activities.smart/coloring/coloring.smart/coloring.smart.component';
+import { ActivitiesByAgeComponent } from './ui/activities/activities/age/activities-by-age/activities-by-age.component';
+
 
 const routes: Routes = [
   { path: 'activities', component: ActivitiesSmartComponent },
@@ -19,6 +21,10 @@ const routes: Routes = [
   {
     path: 'activities/coloring/:categoryId',
     component: ColoringSmartComponent,
+  },
+  {
+    path: 'activities/age/:age',
+    component: ActivitiesByAgeComponent,
   },
   { path: 'family/:familyId', component: FamiliesSmartComponent},
   { path: 'families', component: FamiliesSmartComponent },

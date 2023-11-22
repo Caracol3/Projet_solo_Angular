@@ -39,6 +39,7 @@ import { CreateChildComponent } from './children/children.smart/create-child/cre
 import { CreateChildrenComponent } from './ui/children/children.smart/children.smart/create-children/create-children.component';
 
 import { RadioButtonModule } from 'primeng/radiobutton';
+import { ActivitiesByAgeComponent } from './ui/activities/activities/age/activities-by-age/activities-by-age.component';
 
 @NgModule({
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
@@ -62,6 +63,7 @@ import { RadioButtonModule } from 'primeng/radiobutton';
     ProfilDumbComponent,
     CreateChildComponent,
     CreateChildrenComponent,
+    ActivitiesByAgeComponent,
   ],
   imports: [
     BrowserModule,
