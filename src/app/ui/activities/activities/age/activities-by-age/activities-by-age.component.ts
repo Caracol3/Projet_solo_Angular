@@ -9,25 +9,35 @@ import { Activity } from 'src/app/models/activity.model';
 })
 export class ActivitiesByAgeComponent implements OnInit{
 
-activities: Activity  [] = [];
+activities: Activity[] = [];
+  allActivities: Activity[] = [];
 
-constructor(private activitiesService: ActivitiesService) { }
+  constructor(private activitiesService: ActivitiesService) { }
 
   ngOnInit(): void {
+    this.loadAllActivities();
   }
 
-  filterByAge(event: Event): void {
-    const inputElement = event.target as HTMLInputElement;
-    const age = Number(inputElement.value);
-    this.activitiesService.getActivitiesByAge(age).subscribe(
+  loadAllActivities(): void {
+    this.activitiesService.getActivities().subscribe(
       (activities) => {
         this.activities = activities;
+        this.allActivities = activities;
       },
       (error) => {
-        console.error('Error getting activities by age', error);
+        console.error('Error getting all activities', error);
       }
     );
   }
 
+  filterByAge(age: number): void {
+    this.activities = this.allActivities.filter(activity => activity.recommendedAge === age);
+  }
 
+  filterActivities(ageValue: string): void {
+    const age = Number(ageValue);
+    if (!isNaN(age)) {
+      this.activities = this.allActivities.filter(activity => activity.recommendedAge === age);
+    }
+  }
 }

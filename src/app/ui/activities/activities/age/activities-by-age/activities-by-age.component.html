@@ -1,3 +1,5 @@
-<input type="number" (input)="filterByAge($event)" placeholder="Filter by age" />
+<input type="number" #ageInput placeholder="Filter by age" />
+<button (click)="filterActivities(ageInput.value)">Filter</button>
 <div *ngFor="let activity of activities">
+  {{ activity.title}}
 </div>
