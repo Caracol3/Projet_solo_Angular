@@ -1,3 +1,6 @@
+<input type="text" #searchInput placeholder="Search activities" />
+<button (click)="searchActivities(searchInput.value)">Search</button>
+
 <input type="number" #ageInput placeholder="Filter by age" />
 <button (click)="filterActivities(ageInput.value)">Filter</button>
 <div *ngFor="let activity of activities">
