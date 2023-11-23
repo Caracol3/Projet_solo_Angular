@@ -1,36 +1,51 @@
-<div [ngClass]="{'fade-down': loaded}" class="activities-age">
-  <div class="p-inputgroup">
+
+
+<div class="activities-age">
+
+  <p-sidebar [(visible)]="sidebarVisible" styleClass="custom-sidebar">
+    <h3>Sidebar</h3>
+    <div class="p-inputgroup">
+      <input
+        type="text"
+        pInputText
+        placeholder="Rechercher une activité"
+        #searchInput
+
+      />
+      <button
+        searchInput
+        type="button"
+        size="small"
+        pButton
+        label="Search"
+        (click)="searchActivities(searchInput.value)"
+      ></button>
+    </div>
+
     <input
-      type="text"
+    class="filter-input"
+      type="number"
       pInputText
-      placeholder="Search activities"
-      #searchInput
+      pKeyFilter="num"
+      #ageInput
+      placeholder="Filtrer par âge"
     />
     <button
+    class="filter-input"
       type="button"
       pButton
-      label="Search"
-      (click)="searchActivities(searchInput.value)"
+      label="Filter"
+      (click)="filterActivities(ageInput.value)"
     ></button>
-  </div>
+</p-sidebar>
+<p-button (click)="sidebarVisible = true" icon="pi pi-th-large"></p-button>
 
-  <input
-    type="number"
-    pInputText
-    pKeyFilter="num"
-    #ageInput
-    placeholder="Filter by age"
-  />
-  <button
-    type="button"
-    pButton
-    label="Filter"
-    (click)="filterActivities(ageInput.value)"
-  ></button>
 
-  <div class="grid-container">
+  <div [ngClass]="{ 'fade-down': loaded }" class="grid-container">
     <p-card>
-      <p-header style="background-color: #fde0e0">Activités manuelles</p-header>
+      <p-header style="background-color: #fde0e0" class="card-header"
+        >Activités manuelles</p-header
+      >
       <img
         [routerLink]="['/activities', 1]"
         src="assets/activities_img/activité_manuelle.jpg"

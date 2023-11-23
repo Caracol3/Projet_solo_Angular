@@ -11,6 +11,7 @@ export class ActivitiesByAgeComponent implements OnInit {
   activities: Activity[] = [];
   allActivities: Activity[] = [];
   loaded = false;
+  sidebarVisible = false;
 
   constructor(private activitiesService: ActivitiesService) {}
 
@@ -40,10 +41,12 @@ export class ActivitiesByAgeComponent implements OnInit {
       this.activities = this.allActivities.filter(
         (activity) =>
           activity.title.toLowerCase().includes(searchTerm.toLowerCase())
-        // ||
-        // activity.description.toLowerCase().includes(searchTerm.toLowerCase())
-      );
-    }
+
+          // ||
+          // activity.description.toLowerCase().includes(searchTerm.toLowerCase())
+          );
+        }
+        console.log(this.activities);
   }
 
   filterActivities(ageValue: string): void {

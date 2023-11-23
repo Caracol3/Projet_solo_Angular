@@ -8,3 +8,22 @@ button{
   justify-content: flex-end
 }
 
+:host ::ng-deep button {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  border: none;
+}
+
+:host ::ng-deep .p-card-body {
+  background-color: rgb(255, 146, 136);
+  color: white;
+  border: none;
+}
+
+p{
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #ffffff;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}

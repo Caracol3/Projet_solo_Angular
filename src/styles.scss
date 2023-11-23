@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import "primeicons/primeicons.css";
+@import 'src/app/custom-style.scss';
 
 :root{
   background-color: whitesmoke;
@@ -47,3 +48,11 @@ padding-top: 10px;
 .p-calendar .p-datepicker {
   height: 200px;
 }
+
+.custom-sidebar {
+  height: 100vh;
+  background-color: rgb(255, 140, 0);
+
+}
+
+
