@@ -4,39 +4,7 @@
 
   <p-sidebar [(visible)]="sidebarVisible" styleClass="custom-sidebar">
     <h3>Sidebar</h3>
-    <div class="p-inputgroup">
-      <input
-        type="text"
-        pInputText
-        placeholder="Rechercher une activité"
-        #searchInput
-
-      />
-      <button
-        searchInput
-        type="button"
-        size="small"
-        pButton
-        label="Search"
-        (click)="searchActivities(searchInput.value)"
-      ></button>
-    </div>
-
-    <input
-    class="filter-input"
-      type="number"
-      pInputText
-      pKeyFilter="num"
-      #ageInput
-      placeholder="Filtrer par âge"
-    />
-    <button
-    class="filter-input"
-      type="button"
-      pButton
-      label="Filter"
-      (click)="filterActivities(ageInput.value)"
-    ></button>
+    
 </p-sidebar>
 <p-button (click)="sidebarVisible = true" icon="pi pi-th-large"></p-button>
 

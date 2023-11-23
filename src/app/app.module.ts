@@ -24,6 +24,7 @@ import { InputTextModule } from 'primeng/inputtext';
 import { SidebarModule } from 'primeng/sidebar';
 import { KeyFilterModule } from 'primeng/keyfilter';
 import { CheckboxModule } from 'primeng/checkbox';
+import { DataViewModule } from 'primeng/dataview';
 
 import { FamiliesSmartComponent } from './ui/families/families.smart/families.smart/families.smart.component';
 import { FamiliesDumbComponent } from './ui/families/families.dumb/families.dumb/families.dumb.component';
@@ -86,6 +87,7 @@ import { ActivitiesByAgeComponent } from './ui/activities/activities/age/activit
     SidebarModule,
     KeyFilterModule,
     CheckboxModule,
+    DataViewModule
   ],
   providers: [MessageService],
   bootstrap: [AppComponent],

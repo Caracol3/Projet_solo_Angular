@@ -9,16 +9,46 @@ import { Activity } from 'src/app/models/activity.model';
 })
 export class ActivitiesSmartComponent implements OnInit {
   activities: Activity[] = [];
+  allActivities: Activity[] = [];
 
   constructor(private activitiesService: ActivitiesService) {}
 
   ngOnInit(): void {
-    this.activitiesService.getActivities().subscribe((activities) => {
-      this.activities = activities;
-      console.log(this.activities);
-    });
+    this.activitiesService.getActivities().subscribe(
+      (activities) => {
+        this.activities = activities;
+        this.allActivities = activities;
+      },
+      (error) => {
+        console.error('Error getting all activities', error);
+      }
+    );
   }
 
-  
+
+
+  searchActivities(searchTerm: string): void {
+    if (!searchTerm) {
+      this.activities = this.allActivities;
+    } else {
+      this.activities = this.allActivities.filter(
+        (activity) =>
+          activity.title.toLowerCase().includes(searchTerm.toLowerCase())
+
+          // ||
+          // activity.description.toLowerCase().includes(searchTerm.toLowerCase())
+          );
+        }
+        console.log(this.activities);
+  }
+
+  filterActivities(ageValue: string): void {
+    const age = Number(ageValue);
+    if (!isNaN(age)) {
+      this.activities = this.allActivities.filter(
+        (activity) => activity.recommendedAge === age
+      );
+    }
+  }
 }
 

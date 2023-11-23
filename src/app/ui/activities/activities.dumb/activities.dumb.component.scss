@@ -1,6 +1,103 @@
-.p-card {
-  margin: 1em;
-  display: block;
-  width: auto;
+// .card-container {
+//   display: flex;
+//   flex-wrap: wrap;
+//   justify-content: space-between; /* Pour répartir les cartes horizontalement */
+//   max-width: 300px; /* Ajuste la largeur maximale selon tes besoins */
+//   margin: 0 auto; /* Centrer les cartes */
+// }
 
-}
+// .card {
+//   width: 130px;
+//   height: 100px;
+//   margin: 10px;
+//   padding: 10px;
+//   background-color: #f0f0f0;
+//   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+//   border-radius: 4px;
+//   overflow: hidden;
+//   text-align: center;
+// }
+
+// .card img {
+//   width: 100%; /* L'image prendra la largeur totale de la carte */
+//   height: auto; /* La hauteur s'ajustera automatiquement pour conserver les proportions */
+//   border-radius: 5px;
+// }
+
+// .card p {
+//   font-size: 0.9rem;
+//   margin: 0;
+//   padding: 1px
+// }
+
+
+
+
+
+
+
+
+
+
+
+// .grid-container {
+//   display: grid;
+//   grid-template-columns: repeat(2, 1fr);
+//   max-width: auto;
+// }
+
+// p-card {
+//   width: 150px;
+//   margin: 5px;
+//   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+//   border-radius: 4px;
+//   overflow: hidden;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   height: 100px;
+// }
+
+// p-card img {
+//   width: 120px;
+//   height: auto;
+//   object-fit: cover;
+//   border-radius: 5px;
+//   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+//   margin-bottom: 20px;
+//   margin-top: 0;
+// }
+
+// .p-card .p-card-body {
+//   padding: 0.5rem;
+// }
+
+
+// p-header {
+//   display: block;
+//   font-weight: normal;
+//   font-size: 1.1rem;
+//   border-radius: 4px;
+//   padding-top: 10px;
+//   padding: 5px;
+//   width: 100%;
+//   text-align: center;
+//   background-color: #f0f0f0;
+// }
+
+// .card-header{
+//   width:100% !important ;
+// }
+
+// :host ::ng-deep button {
+//   background-color: rgb(83, 196, 181);
+//   color: white;
+//   border: none;
+// }
+
+// .p-card {
+//   margin: 1em;
+//   display: block;
+//   width: auto;
+
+// }
