@@ -12,6 +12,13 @@ export class HeaderComponent {
 
 
   activities: MenuItem[] = [
+
+    {
+      label: 'Activités manuelles',
+      icon: 'pi pi-angle-right',
+      routerLink: 'home'
+
+    },
     {
       label: 'Activités manuelles',
       icon: 'pi pi-angle-right',

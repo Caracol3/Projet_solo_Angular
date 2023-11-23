@@ -22,6 +22,8 @@ import { CalendarModule } from 'primeng/calendar';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { InputTextModule } from 'primeng/inputtext';
 import { SidebarModule } from 'primeng/sidebar';
+import { KeyFilterModule } from 'primeng/keyfilter';
+import { CheckboxModule } from 'primeng/checkbox';
 
 import { FamiliesSmartComponent } from './ui/families/families.smart/families.smart/families.smart.component';
 import { FamiliesDumbComponent } from './ui/families/families.dumb/families.dumb/families.dumb.component';
@@ -81,7 +83,9 @@ import { ActivitiesByAgeComponent } from './ui/activities/activities/age/activit
     CalendarModule,
     RadioButtonModule,
     InputTextModule,
-    SidebarModule
+    SidebarModule,
+    KeyFilterModule,
+    CheckboxModule,
   ],
   providers: [MessageService],
   bootstrap: [AppComponent],

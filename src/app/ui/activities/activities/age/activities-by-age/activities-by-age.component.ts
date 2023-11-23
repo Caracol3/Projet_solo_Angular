@@ -41,8 +41,9 @@ export class ActivitiesByAgeComponent implements OnInit {
     } else {
       this.activities = this.allActivities.filter(
         (activity) =>
-          activity.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-          activity.description.toLowerCase().includes(searchTerm.toLowerCase())
+          activity.title.toLowerCase().includes(searchTerm.toLowerCase()) 
+          // ||
+          // activity.description.toLowerCase().includes(searchTerm.toLowerCase())
       );
     }
   }

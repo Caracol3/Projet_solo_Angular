@@ -23,7 +23,7 @@ const routes: Routes = [
     component: ColoringSmartComponent,
   },
   {
-    path: 'activities/age/:age',
+    path: 'home',
     component: ActivitiesByAgeComponent,
   },
   { path: 'family/:familyId', component: FamiliesSmartComponent},

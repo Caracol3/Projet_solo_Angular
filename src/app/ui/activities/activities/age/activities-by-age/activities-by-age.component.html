@@ -1,8 +1,13 @@
-<input type="text" #searchInput placeholder="Search activities" />
-<button (click)="searchActivities(searchInput.value)">Search</button>
+<!-- Groupe de recherche d'activité avec PrimeNG -->
+<div class="p-inputgroup">
+  <input type="text" pInputText placeholder="Search activities" #searchInput />
+  <button type="button" pButton label="Search" (click)="searchActivities(searchInput.value)"></button>
+</div>
 
-<input type="number" #ageInput placeholder="Filter by age" />
-<button (click)="filterActivities(ageInput.value)">Filter</button>
+<!-- Filtre par âge avec PrimeNG et KeyFilter -->
+<input type="number" pInputText pKeyFilter="num" #ageInput placeholder="Filter by age" />
+<button type="button" pButton label="Filter" (click)="filterActivities(ageInput.value)"></button>
+
 <div *ngFor="let activity of activities">
-  {{ activity.title}}
+  {{ activity.title }}
 </div>
