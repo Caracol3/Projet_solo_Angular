@@ -23,7 +23,7 @@ export class HomeComponent {
         if (routerLink) {
           this.router.navigateByUrl(routerLink);
         }
-      }, 50); // Attendre 50 millisecondes avant la redirection
+      }, 50); 
     }
   }
 }
