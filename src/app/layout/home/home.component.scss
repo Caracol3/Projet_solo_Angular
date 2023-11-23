@@ -27,27 +27,45 @@
 }
 
 .body-link {
+  display: flex;
+  flex-direction: column;
   width: 100%;
   height: 75vh;
-  background-image: url('/assets/homepage/background2.jpg');
-  background-size: 100% auto;
+  background-image: url('/assets/homepage/background3.jpg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight:lighter
 
+}
+
+h3{
+  position: absolute;
+  top: 290px;
+  font-size: 2.5rem;
+  font-weight: 400;
+  // margin-bottom: 400px;
+  color: #ffffff;
 }
 
 .scroll-link {
+  position: absolute;
+  bottom: 100px;
   text-decoration: none;
   padding: 10px 20px;
-  background-color: #007bff;
+  background-color: #a57cf896;
   color: #fff;
-  border-radius: 5px;
+  border-radius: 10px;
   cursor: pointer;
 }
 
+
 .scroll-link:hover {
-  background-color: #0056b3;
+  background-color: #00b386;
 }
 
 

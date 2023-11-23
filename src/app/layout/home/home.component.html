@@ -1,14 +1,15 @@
 <div class="container">
   <div class="header-logo">
     <img
-      src="assets/logos/La fabrique à idées v3.png"
+      src="assets/logos/logo2.svg"
       alt="logo"
       class="logo-img"
       routerLink="/home"
     />
   </div>
   <div class="body-link">
-    <a [@fadeDown]="'in'" routerLink="activities/age" class="scroll-link" (click)="onScrollLinkClick($event)">Découvrir plus</a>
+    <h3 [@fadeDown]="'out'">Éveillez la créativité de vos enfants</h3>
+    <a [@fadeDown]="'in'" routerLink="activities/age" class="scroll-link" (click)="onScrollLinkClick($event)">Trouvez votre activité</a>
   </div>
 </div>
 
