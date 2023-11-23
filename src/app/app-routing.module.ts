@@ -12,6 +12,11 @@ import { ActivitiesByAgeComponent } from './ui/activities/activities/age/activit
 
 
 const routes: Routes = [
+  {
+    path: 'home',
+    component: HomeComponent,
+  },
+  { path: 'activities/age', component: ActivitiesByAgeComponent },
   { path: 'activities', component: ActivitiesSmartComponent },
   { path: 'activities/:categoryId', component: SingleActivitySmartComponent },
   {
@@ -21,10 +26,6 @@ const routes: Routes = [
   {
     path: 'activities/coloring/:categoryId',
     component: ColoringSmartComponent,
-  },
-  {
-    path: 'home',
-    component: ActivitiesByAgeComponent,
   },
   { path: 'family/:familyId', component: FamiliesSmartComponent},
   { path: 'families', component: FamiliesSmartComponent },

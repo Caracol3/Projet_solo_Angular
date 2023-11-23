@@ -29,21 +29,15 @@ export class ActivitiesByAgeComponent implements OnInit {
     );
   }
 
-  filterByAge(age: number): void {
-    this.activities = this.allActivities.filter(
-      (activity) => activity.recommendedAge === age
-    );
-  }
-
   searchActivities(searchTerm: string): void {
     if (!searchTerm) {
       this.activities = this.allActivities;
     } else {
       this.activities = this.allActivities.filter(
         (activity) =>
-          activity.title.toLowerCase().includes(searchTerm.toLowerCase()) 
-          // ||
-          // activity.description.toLowerCase().includes(searchTerm.toLowerCase())
+          activity.title.toLowerCase().includes(searchTerm.toLowerCase())
+        // ||
+        // activity.description.toLowerCase().includes(searchTerm.toLowerCase())
       );
     }
   }

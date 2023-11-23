@@ -1,31 +1,21 @@
-<div class="grid-container">
+<div class="container">
+  <div class="header-logo">
+    <img
+      src="assets/logos/La fabrique à idées v3.png"
+      alt="logo"
+      class="logo-img"
+      routerLink="/home"
+    />
+  </div>
+  <div class="body-link">
+    <a routerLink="activities/age" class="scroll-link" (click)="onScrollLinkClick($event)">Découvrir plus</a>
+  </div>
+</div>
 
-  <p-card>
-    <p-header style="background-color: #fde0e0;">Activités manuelles</p-header>
-    <img [routerLink]="['/activities', 1]" src="assets/activities_img/activité_manuelle.jpg" alt="Image 1">
-  </p-card>
 
-  <p-card>
-    <p-header style="background-color: #fdf4e0;">Activités éxterieure</p-header>
-    <img  [routerLink]="['/activities', 2]" src="assets/activities_img/activité_plein_air.jpg" alt="Image 1">
-  </p-card>
-
-  <p-card>
-    <p-header style="background-color: #e6fde0;">Motricité</p-header>
-    <img [routerLink]="['/activities', 4]" src="assets/activities_img/motricité.jpg" alt="Image 1">
-  </p-card>
-
-  <p-card>
-    <p-header style="background-color: #efe0fd;">Coloriages</p-header>
-    <img [routerLink]="['/activities/coloring/3']" src="assets/activities_img/coloriage.jpg" class="img" alt="Image 1">
-  </p-card>
-
-  <p-card>
-    <p-header style="background-color: #fbfde0;">Jeux de société</p-header>
-    <img [routerLink]="['/activities', 5]" src="assets/activities_img/jeux_societe.jpg" alt="Image 1">
-  </p-card>
-
-  <p-card>
-    <p-header style="background-color: #e0f2fd;">Contes</p-header>
-    <img [routerLink]="['/activities', 6]" src="assets/activities_img/contes.jpg" alt="Image 1">
-  </p-card>
+<!-- <p-button routerLink="activities/age" label="Découvrir plus" -->
+  <!-- [raised]="true"
+    severity="help"
+  ></p-button>
+</div> -->
+<!-- </p-button> -->
