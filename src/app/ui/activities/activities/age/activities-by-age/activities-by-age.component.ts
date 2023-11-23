@@ -10,10 +10,14 @@ import { Activity } from 'src/app/models/activity.model';
 export class ActivitiesByAgeComponent implements OnInit {
   activities: Activity[] = [];
   allActivities: Activity[] = [];
+  loaded = false;
 
   constructor(private activitiesService: ActivitiesService) {}
 
   ngOnInit(): void {
+    setTimeout(() => {
+      this.loaded = true;
+    }, 100);
     this.loadAllActivities();
   }
 
