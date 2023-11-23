@@ -31,6 +31,8 @@ export class ActivitiesService {
     return this.httpClient.get<Activity>(this.APIurl + '/activity/' + activityId);
   }
 
- 
+  getActivitiesByAge(age:number): Observable<Activity[]> {
+    return this.httpClient.get<Activity[]>(this.APIurl + '/activity/age/' + age);
+  }
 
 }

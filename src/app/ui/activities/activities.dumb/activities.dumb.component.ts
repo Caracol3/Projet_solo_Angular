@@ -9,4 +9,6 @@ import { Activity } from 'src/app/models/activity.model';
 export class ActivitiesDumbComponent {
   @Input()
   activity!: Activity;
+
+  
 }

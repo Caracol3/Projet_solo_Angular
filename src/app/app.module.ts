@@ -20,6 +20,10 @@ import { GalleriaModule } from 'primeng/galleria';
 import { DialogModule } from 'primeng/dialog';
 import { CalendarModule } from 'primeng/calendar';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { InputTextModule } from 'primeng/inputtext';
+import { SidebarModule } from 'primeng/sidebar';
+import { KeyFilterModule } from 'primeng/keyfilter';
+import { CheckboxModule } from 'primeng/checkbox';
 
 import { FamiliesSmartComponent } from './ui/families/families.smart/families.smart/families.smart.component';
 import { FamiliesDumbComponent } from './ui/families/families.dumb/families.dumb/families.dumb.component';
@@ -37,6 +41,7 @@ import { CreateChildComponent } from './children/children.smart/create-child/cre
 import { CreateChildrenComponent } from './ui/children/children.smart/children.smart/create-children/create-children.component';
 
 import { RadioButtonModule } from 'primeng/radiobutton';
+import { ActivitiesByAgeComponent } from './ui/activities/activities/age/activities-by-age/activities-by-age.component';
 
 @NgModule({
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
@@ -60,6 +65,7 @@ import { RadioButtonModule } from 'primeng/radiobutton';
     ProfilDumbComponent,
     CreateChildComponent,
     CreateChildrenComponent,
+    ActivitiesByAgeComponent,
   ],
   imports: [
     BrowserModule,
@@ -76,6 +82,10 @@ import { RadioButtonModule } from 'primeng/radiobutton';
     DialogModule,
     CalendarModule,
     RadioButtonModule,
+    InputTextModule,
+    SidebarModule,
+    KeyFilterModule,
+    CheckboxModule,
   ],
   providers: [MessageService],
   bootstrap: [AppComponent],
