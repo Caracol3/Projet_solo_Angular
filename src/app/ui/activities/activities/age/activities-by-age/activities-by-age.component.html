@@ -1,14 +1,7 @@
 
 
 <div class="activities-age">
-
-  <p-sidebar [(visible)]="sidebarVisible" styleClass="custom-sidebar">
-    <h3>Sidebar</h3>
-    
-</p-sidebar>
-<p-button (click)="sidebarVisible = true" icon="pi pi-th-large"></p-button>
-
-
+  
   <div [ngClass]="{ 'fade-down': loaded }" class="grid-container">
     <p-card>
       <p-header style="background-color: #fde0e0" class="card-header"

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ActivitiesService } from 'src/app/data_access/activities/activities.service';
 import { Activity } from 'src/app/models/activity.model';
 
@@ -11,7 +12,8 @@ export class ActivitiesSmartComponent implements OnInit {
   activities: Activity[] = [];
   allActivities: Activity[] = [];
 
-  constructor(private activitiesService: ActivitiesService) {}
+  constructor(private activitiesService: ActivitiesService,
+    private router: Router) {}
 
   ngOnInit(): void {
     this.activitiesService.getActivities().subscribe(
@@ -24,8 +26,6 @@ export class ActivitiesSmartComponent implements OnInit {
       }
     );
   }
-
-
 
   searchActivities(searchTerm: string): void {
     if (!searchTerm) {
@@ -49,6 +49,11 @@ export class ActivitiesSmartComponent implements OnInit {
         (activity) => activity.recommendedAge === age
       );
     }
+  }
+
+  onSelectedActivity(activityId: number) {
+    this.router.navigate(['/activities/activity', activityId]);
+    console.log(activityId);
   }
 }
 
