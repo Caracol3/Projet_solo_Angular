@@ -1,33 +1,61 @@
 <div class="layout-header">
-
-
   <div>
     <p-sidebar
-    [(visible)]="sidebarVisible"
-    position="top"
-    styleClass="custom-sidebar"
-  >
-   <ul>
-    <li><a [routerLink]="['/home']">Accueil</a></li>
-    <p-divider type="solid"></p-divider>
-    <li><a [routerLink]="['/activities']">Toutes les activités</a></li>
-    <p-divider type="solid"></p-divider>
-    <li><a [routerLink]="['/activities/1']">Activités manuelles</a></li>
-    <p-divider type="solid"></p-divider>
-    <li><a [routerLink]="['/activities/3']">Coloriage</a></li>
-    <p-divider type="solid"></p-divider>
-    <li><a [routerLink]="['/activities/2']">Activités plein air</a></li>
-    <p-divider type="solid"></p-divider>
-    <li><a [routerLink]="['/activities/4']">Motricité</a></li>
-    <p-divider type="solid"></p-divider>
-    <li><a [routerLink]="['/activities/5']">Contes</a></li>
-    <p-divider type="solid"></p-divider>
-    <li><a [routerLink]="['/activities/6']">Jeux de société</a></li>
-    <p-divider type="solid"></p-divider>
-  </ul>
-</p-sidebar>
-  <p-button (click)="sidebarVisible = true" icon="pi pi-arrow-right"></p-button>
-
+      [(visible)]="sidebarVisible"
+      position="top"
+      styleClass="custom-sidebar"
+    >
+      <ul>
+        <li><a [routerLink]="['/home']">Accueil</a></li>
+        <p-divider type="solid"></p-divider>
+        <li>
+          <a [routerLink]="['/activities']" (click)="closeSidebar()"
+            >Toutes les activités</a
+          >
+        </li>
+        <p-divider type="solid"></p-divider>
+        <li>
+          <a [routerLink]="['/activities/1']" (click)="closeSidebar()"
+            >Activités manuelles</a
+          >
+        </li>
+        <p-divider type="solid"></p-divider>
+        <li>
+          <a [routerLink]="['/activities/3']" (click)="closeSidebar()"
+            >Coloriage</a
+          >
+        </li>
+        <p-divider type="solid"></p-divider>
+        <li>
+          <a [routerLink]="['/activities/2']" (click)="closeSidebar()"
+            >Activités plein air</a
+          >
+        </li>
+        <p-divider type="solid"></p-divider>
+        <li>
+          <a [routerLink]="['/activities/4']" (click)="closeSidebar()"
+            >Motricité</a
+          >
+        </li>
+        <p-divider type="solid"></p-divider>
+        <li>
+          <a [routerLink]="['/activities/5']" (click)="closeSidebar()"
+            >Contes</a
+          >
+        </li>
+        <p-divider type="solid"></p-divider>
+        <li>
+          <a [routerLink]="['/activities/6']" (click)="closeSidebar()"
+            >Jeux de société</a
+          >
+        </li>
+        <p-divider type="solid"></p-divider>
+      </ul>
+    </p-sidebar>
+    <p-button
+      (click)="sidebarVisible = true"
+      icon="pi pi-arrow-right"
+    ></p-button>
   </div>
 
   <img
@@ -38,33 +66,12 @@
   />
 
   <div class="right-section">
-    <p-menu #settingsMenu [model]="settings" [popup]="true"></p-menu>
     <button
       pButton
       type="button"
-      (click)="settingsMenu.toggle($event)"
-      icon="pi pi-ellipsis-v"
+      icon="pi pi-user"
       size="normal"
+      [routerLink]="['/family/1']"
     ></button>
   </div>
 </div>
-
-
-
-
-  <!-- <p-sidebar [(visible)]="sidebarVisible" class="sidebar">
-    <ng-template pTemplate="header">Header Content</ng-template>
-    <ng-template pTemplate="content">
-      <ul>
-        <li><a [routerLink]="['/home']">Accueil</a></li>
-        <li><a [routerLink]="['/activities']">Toutes les activités</a></li>
-        <li><a [routerLink]="['/activities/1']">Activités manuelles</a></li>
-        <li><a [routerLink]="['/activities/3']">Coloriage</a></li>
-        <li><a [routerLink]="['/activities/2']">Activités plein air</a></li>
-        <li><a [routerLink]="['/activities/4']">Motricité</a></li>
-        <li><a [routerLink]="['/activities/5']">Contes</a></li>
-        <li><a [routerLink]="['/activities/6']">Jeux de société</a></li>
-      </ul>
-    </ng-template>
-    <ng-template pTemplate="footer">Footer Content</ng-template>
-</p-sidebar> -->

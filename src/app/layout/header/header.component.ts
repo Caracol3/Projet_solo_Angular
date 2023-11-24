@@ -9,66 +9,18 @@ import { MenuItem } from 'primeng/api';
 })
 export class HeaderComponent {
   sidebarVisible: boolean = false;
-  activities: MenuItem[] = [
-    {
-      label: 'Accueil',
-      icon: 'pi pi-angle-right',
-      routerLink: 'home',
-    },
-    {
-      label: 'Toutes les activités',
-      icon: 'pi pi-angle-right',
-      routerLink: '/activities',
-    },
-    {
-      label: 'Activités manuelles',
-      icon: 'pi pi-angle-right',
-      routerLink: '/activities/1',
-    },
-    {
-      label: 'Coloriage',
-      icon: 'pi pi-angle-right',
-      routerLink: '/activities/3',
-    },
-    {
-      label: 'Activités plein air',
-      icon: 'pi pi-angle-right',
-      routerLink: '/activities/2',
-    },
-    {
-      label: 'Motricité',
-      icon: 'pi pi-angle-right',
-      routerLink: '/activities/4',
-    },
-    {
-      label: 'Contes',
-      icon: 'pi pi-angle-right',
-      routerLink: '/activities/5',
-    },
-    {
-      label: 'Jeux de société',
-      icon: 'pi pi-angle-right',
-      routerLink: '/activities/6',
-    },
-  ];
 
   settings: MenuItem[] = [
     {
       label: 'Mon compte',
       icon: 'pi pi-fw pi-users',
       routerLink: '/family/1',
-    },
-    {
-      label: 'Paramètres',
-      icon: 'pi pi-fw pi-cog',
-      command: () => {},
-    },
-    {
-      label: 'Déconnexion',
-      icon: 'pi pi-fw pi-sign-out',
-      command: () => {},
-    },
+    }
   ];
 
   constructor(private router: Router) {}
+
+  closeSidebar(){
+    this.sidebarVisible = false;
+  }
 }

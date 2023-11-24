@@ -22,9 +22,12 @@ width: 120px;
   width: 40px;
   height: 40px;
 }
+
 :host ::ng-deep button {
   background-color: rgb(83, 196, 165);
   color: white;
   border: none;
+  margin-left: 15px;
+  width: 40px;
 }
 

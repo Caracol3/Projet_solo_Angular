@@ -52,17 +52,32 @@ padding-top: 10px;
 .custom-sidebar {
   height: 100vh;
   background-image: url('assets/homepage/background4.jpg');
-  background-position: center;
-  background-size: initial;
-  // background-color: rgb(255, 140, 0);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: 250px 290px;
 
 }
 .custom-sidebar a{
   text-decoration: none;
   list-style: none;
+  color: yellowgreen;
+  font-size: 1.1rem;
+  font-weight: 550;
+  margin: 0;
+  padding-left: 10px;
 }
 .custom-sidebar li{
   list-style: none;
+}
+
+ul {
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 5px;
 }
 
 

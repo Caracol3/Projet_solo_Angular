@@ -1,12 +1,12 @@
 <p-card header="Famille {{family?.username}}" [style]="{ width: '80vw' }" class="card">
   <ng-template pTemplate="header">
-    <img alt="Card" src="assets/family/family.jpg" />
+    <img alt="Card" src="assets/family/family4.jpg" />
   </ng-template>
   <div *ngFor="let child of children">
     <p>Mes enfants : {{ child?.username }}</p>
   </div>
   <ng-template pTemplate="footer" class="footer">
-    <p-button (click)="showDialog()" label="Ajouter un enfant" icon="pi pi-check" iconPos="right"></p-button>
+    <p-button (click)="showDialog()" label="Ajouter un enfant" icon="pi pi-user-plus" iconPos="right"></p-button>
   </ng-template>
 </p-card>
 
@@ -15,7 +15,7 @@
   <app-create-children
   [familyId]="familyId"
   (dataEmitChildCreated)="onReceiveChildrenFromChild($event)"
-  (closeDialog)="closeChildrenDialog()" 
+  (closeDialog)="closeChildrenDialog()"
   >
 
   </app-create-children>
